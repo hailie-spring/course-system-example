@@ -1,0 +1,400 @@
+{
+    "title": "The common timetable system for education and training industry",
+    "navigation": {
+        "label": "Nagivation",
+        "services": {
+            "register": "Register",
+            "attendance": "Attendance",
+            "search": "Search",
+            "setting": "setting"
+        }
+    },
+    "sign": {
+        "in": "Sign In",
+        "up": "Sign Up",
+        "out": "Sign Out",
+        "setting": {
+            "changePassword": "Change Password",
+            "signout": "Sign Out"
+        },
+        "up400Error": "Username alreay taken, please change one or login directly",
+        "in401Error": "Not found the username or error password",
+        "common500Error": "Internal error, please try again",
+        "diffError": "Password confirmation doesn't match the password",
+        "sameError": "The new password is same with the old",
+        "invalidError": "Old password isn't valid",
+        "changePasswordSuccess": "Password changed successfully.",
+        "upField": {
+            "email": "Email",
+            "telephoneNumber": "Telephone Number",
+            "password": "Password"
+        },
+        "inField": {
+            "telephoneNumber": "Telephone Number",
+            "password": "Password"
+        },
+        "changePasswordField": {
+            "old": "Old Password",
+            "new": "New Password",
+            "confirm": "Confirm Password"
+        },
+        "updatePassword": "Update Password"
+    },
+    "submit": {
+        "title": "Submit Services",
+        "registration": {
+            "contractNumber": "Contract Number",
+            "telephoneNumber": "Telephone Number",
+            "parentName": "Name of Parent",
+            "studentName": "Name of Student",
+            "birthdate": "Date of Birth",
+            "courseName": "Course Name",
+            "registrationFee": "Registration Fee",
+            "totalQuantity": "Number of Classes"
+        },
+        "attendance": {
+            "contractNumber": "Contract Number",
+            "telephoneNumber": "Telephone Number",
+            "studentName": "Name of Student",
+            "courseName": "Course Name",
+            "schoolDate": "School Date",
+            "startSchoolTime": "Start School Time",
+            "endSchoolTime": "End School Time",
+            "evaluation": "Evaluation"
+        },
+        "timetable": {
+            "studentId": "ID of Student",
+            "teacherId": "ID of teacher",
+            "week": "Day of the Week",
+            "schoolStartTime": "School Start Time",
+            "schoolEndTime": "School End Time"
+        },
+        "cancel": "Clear",
+        "submit": "Submit",
+        "success": "Submitted Successfully",
+        "error": "Submitted Unsuccessfully"
+    },
+    "courses": {
+        "title": "Courses",
+        "label": "Course Name",
+        "all": "All",
+        "mode": "Select a course name",
+        "details": {
+            "tableTennis": "Table Tennis",
+            "swimming": "Swimming",
+            "cheerleading": "Cheerleading",
+            "vocalMusic": "Vocal Music",
+            "fineArt": "Fine Art"
+        }
+    },
+    "services": {
+        "title": "Services",
+        "label": "Service Type",
+        "all": "all",
+        "mode": "-- select a service type --",
+        "details": {
+            "registration": "Registration",
+            "attendance": "Attendance"
+        }
+    },
+    "search": {
+        "button": "Search",
+        "title": "Search: ",
+        "placeholder": "Input ",
+        "error": "Search Unsuccessfully",
+        "contractDetail": "Contract Details",
+        "signInDetail": "SignIn Details",
+        "signInLabel": "Sign In",
+        "evaluationLabel": "Evaluation",
+        "showDates": "Show Dates",
+        "fieldLabel": "Field Name",
+        "date": {
+            "from": "From",
+            "to": "To"
+        },
+        "registrationSearchFields": {
+            "contractNumber": "Contract Number",
+            "telephoneNumber": "Telephone Number",
+            "studentName": "Student Name",
+            "parentName": "Parent Name"
+        },
+        "attendanceSearchFields": {
+            "contractNumber": "Contract Number",
+            "telephoneNumber": "Telephone Number",
+            "studentName": "Student Name"
+        },
+        "registrationHeaders": [
+            {
+                "field": "contractNumber",
+                "headerName": "Contract Number",
+                "editable": false,
+                "sortable": true,
+                "width": 400
+            },
+            {
+                "field": "courseName",
+                "headerName": "Course Name",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Name of Student",
+                "field": "studentName",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Number of Classes",
+                "field": "totalQuantity",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Used Number of Classes",
+                "field": "consumedQuantity",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Sign In",
+                "field": "signIn",
+                "editable": false,
+                "sortable": false,
+                "width": 200
+            },
+            {
+                "headerName": "More Detail",
+                "field": "moreDetail",
+                "editable": false,
+                "sortable": false,
+                "width": 200
+            }
+        ],
+        "attendanceHeaders": [
+            {
+                "headerName": "Contract Number",
+                "field": "contractNumber",
+                "editable": false,
+                "sortable": true,
+                "width": 400
+            },
+            {
+                "headerName": "Course Name",
+                "field": "courseName",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Name of Student",
+                "field": "studentName",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Telephone Number",
+                "field": "telephoneNumber",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "School Date",
+                "field": "schoolDate",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Start School Time",
+                "field": "startSchoolTime",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "End School Time",
+                "field": "endSchoolTime",
+                "editable": false,
+                "sortable": true,
+                "width": 200
+            },
+            {
+                "headerName": "Evaluation",
+                "field": "evaluation",
+                "editable": true,
+                "sortable": false,
+                "width": 200
+            }
+        ],
+        "registrationFilterColumns": [
+            {
+                "Header": "Contract Number",
+                "accessor": "contractNumber"
+            },
+            {
+                "Header": "Course Name",
+                "accessor": "courseName"
+            },
+            {
+                "Header": "Number of Classes",
+                "accessor": "totalQuantity"
+            },
+            {
+                "Header": "Used Number of Classes",
+                "accessor": "consumedQuantity"
+            },
+            {
+                "Header": "Name of Student",
+                "accessor": "studentName"
+            },
+            {
+                "Header": "Sign In",
+                "accessor": "signIn"
+            }
+        ],
+        "registrationDetails": [
+            {
+                "label": "Contract Number",
+                "key": "contractNumber"
+            },
+            {
+                "label": "Registration Fee",
+                "key": "registrationFee"
+            },
+            {
+                "label": "Course Name",
+                "key": "courseName"
+            },
+            {
+                "label": "Number of Classes",
+                "key": "totalQuantity"
+            },
+            {
+                "label": "Used Number of Classes",
+                "key": "consumedQuantity"
+            },
+            {
+                "label": "Left Number of Classes",
+                "key": "leftQuantity"
+            },
+            {
+                "label": "Telephone Number",
+                "key": "telephoneNumber"
+            },
+            {
+                "label": "Name of Parent",
+                "key": "parentName"
+            },
+            {
+                "label": "Name of Student",
+                "key": "studentName"
+            },
+            {
+                "label": "Date of Birth",
+                "key": "birthdate"
+            }
+        ],
+        "attendanceFilterColumns": [
+            {
+                "Header": "Contract Number",
+                "accessor": "contractNumber"
+            },
+            {
+                "Header": "Course Name",
+                "accessor": "courseName"
+            },
+            {
+                "Header": "Telephone Number",
+                "accessor": "telephoneNumber"
+            },
+            {
+                "Header": "Name of Student",
+                "accessor": "studentName"
+            },
+            {
+                "Header": "School Date",
+                "accessor": "schoolDate"
+            },
+            {
+                "Header": "Start School Time",
+                "accessor": "startSchoolTime"
+            },
+            {
+                "Header": "End School Time",
+                "accessor": "endSchoolTime"
+            },
+            {
+                "Header": "Evaluation",
+                "accessor": "evaluation"
+            }
+        ],
+        "attendanceAllColumns": [
+            {
+                "Header": "Contract Number",
+                "accessor": "contractNumber"
+            },
+            {
+                "Header": "Course Name",
+                "accessor": "courseName"
+            },
+            {
+                "Header": "Telephone Number",
+                "accessor": "telephoneNumber"
+            },
+            {
+                "Header": "Name of Student",
+                "accessor": "studentName"
+            },
+            {
+                "Header": "School Date",
+                "accessor": "schoolDate"
+            },
+            {
+                "Header": "Start School Time",
+                "accessor": "startSchoolTime"
+            },
+            {
+                "Header": "End School Time",
+                "accessor": "endSchoolTime"
+            },
+            {
+                "Header": "Evaluation",
+                "accessor": "evaluation"
+            }
+        ]
+    },
+    "timetable": {
+        "title": "timetable",
+        "mode": "Select one day",
+        "timeCaption": "Time",
+        "week": {
+            "mon": "Monday",
+            "tue": "Tuesday",
+            "wed": "Wednesday",
+            "thurs": "Thursday",
+            "fri": "Friday",
+            "Sat": "Saturday",
+            "Sun": "Sunday"
+        },
+        "months": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ]
+    }
+}
