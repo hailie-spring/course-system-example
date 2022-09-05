@@ -2,5 +2,5 @@
 .DS_Store
 /secrets
 tools/elastalert/rules/*
-./frontend/node_modules
-./backend/node_modules
+frontend/node_modules
+backend/node_modules
