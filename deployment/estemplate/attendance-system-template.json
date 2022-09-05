@@ -1,0 +1,61 @@
+{
+    "index_patterns": [
+        "attendance-system-*"
+    ],
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 1,
+        "index.lifecycle.name": "delete-submit-policy",
+        "analysis": {
+            "normalizer": {
+                "my_normalizer": {
+                    "type": "custom",
+                    "char_filter": [],
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "contractNumber": {
+                "type": "keyword",
+                "normalizer": "my_normalizer"
+            },
+            "telephoneNumber": {
+                "type": "keyword"
+            },
+            "studentName": {
+                "type": "keyword"
+            },
+            "courseName": {
+                "type": "keyword"
+            },
+            "gmtCreated": {
+                "type": "date",
+                "format": "strict_date_optional_time"
+            },
+            "schoolDate": {
+                "type": "date",
+                "format": "strict_date_optional_time"
+            },
+            "startSchoolTime": {
+                "type": "date",
+                "format": "strict_hour_minute"
+            },
+            "endSchoolTime": {
+                "type": "date",
+                "format": "strict_hour_minute"
+            },
+            "evaluation": {
+                "type": "text"
+            },
+            "docId":{
+                "type":"keyword",
+                "normalizer": "my_normalizer"
+            }
+        }
+    }
+}

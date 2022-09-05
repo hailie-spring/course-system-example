@@ -1,0 +1,37 @@
+{
+    "index_patterns": [
+        "login-system-*"
+    ],
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 1,
+        "index.lifecycle.name": "delete-submit-policy",
+        "analysis": {
+            "normalizer": {
+                "my_normalizer": {
+                    "type": "custom",
+                    "char_filter": [],
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "email": {
+                "type": "keyword"
+            },
+            "telephoneNumber": {
+                "type": "keyword"
+            },
+            "password": {
+                "type": "keyword"
+            },
+            "docId": {
+                "type": "keyword"
+            }
+        }
+    }
+}

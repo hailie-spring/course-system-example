@@ -2,13 +2,15 @@ version: '3.5'
 
 # To Join any other app setup using another network, change name and set external = true
 networks:
-  default:
-    name: elastic
+  course-system-example:
+    name: course-system-example
     external: false
 
 # will contain all elasticsearch data.
 volumes:
   elasticsearch-data:
+  cache:
+    driver: local
 
 secrets:
   elasticsearch.keystore:
@@ -68,6 +70,8 @@ services:
       nofile:
         soft: 200000
         hard: 200000
+    networks:
+      - course-system-example
     healthcheck:
       test: ["CMD", "sh", "-c", "curl -sf --insecure https://$ELASTIC_USERNAME:$ELASTIC_PASSWORD@localhost:9200/_cat/health | grep -ioE 'green|yellow' || echo 'not green/yellow cluster status'"]
 
@@ -93,6 +97,8 @@ services:
     ports:
       - "5044:5044"
       - "9600:9600"
+    networks:
+      - course-system-example
     healthcheck:
       test: ["CMD", "curl", "-s" ,"-XGET", "http://127.0.0.1:9600"]
 
@@ -120,3 +126,50 @@ services:
         target: /certs/kibana.key
     ports:
       - "5601:5601"
+    networks:
+      - course-system-example
+  redis:
+    image: redis:7.0
+    restart: always
+    ports:
+      - '6381:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+    volumes: 
+      - cache:/data
+    networks:
+      - course-system-example
+  frontend:
+    depends_on:
+      - backend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ../frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - course-system-example
+  backend:
+    depends_on:
+      - redis
+      - elasticsearch
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ../backend
+    ports:
+      - "8000:8000"
+    networks:
+      - course-system-example
+  gateway:
+    depends_on:
+      - backend
+      - frontend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ../gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - course-system-example
