@@ -1,0 +1,16 @@
+{
+    "es": {
+        "node": "https://192.168.171.128:9200",
+        "auth": {
+            "username": "elastic",
+            "password": "changeme"
+        }
+    },
+    "redis": {
+        "host": "192.168.171.128",
+        "port": 6381,
+        "db": 0,
+        "password": "changeme",
+        "commandTimeout": 2000
+    }
+}
