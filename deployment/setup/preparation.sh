@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function putEsTemplate() {
     set -o allexport
     source .env
