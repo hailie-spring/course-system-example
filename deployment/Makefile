@@ -38,7 +38,8 @@ up:
 	@echo "Visit Kibana: https://localhost:5601"
 
 esmanage:
-	$(shell ./setup/preparation.sh)
+	chmod -R 777 ./setup/preparation.sh
+	./setup/preparation.sh
 
 monitoring:		## Start ELK Monitoring.
 	@docker compose ${COMPOSE_MONITORING} up -d --build ${ELK_MONITORING}
