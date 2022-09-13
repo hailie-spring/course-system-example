@@ -12,5 +12,6 @@ The steps to start the service is:
 5. make esmanage
 6. visit http://${host}:8080
 
-If want to stop the service:
+If want to stop the service:   
+
 make down
