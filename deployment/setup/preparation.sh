@@ -7,7 +7,11 @@ function putEsTemplate() {
     baseCurl="curl --insecure -u ${ELASTIC_USERNAME}:${ELASTIC_PASSWORD} "
     baseUrl="https://localhost:${ELASTICSEARCH_PORT}"
     #set -x
-    until $(${baseCurl} -o /dev/null -s --head --fail -X GET ${baseUrl}); do
+    STATUSCODE=$(${baseCurl} -o /dev/null -s --head --write-out "%{http_code}" -X GET ${baseUrl})
+    while true; do
+        if [ "$STATUSCODE" -eq 200 ]; then
+             break
+        fi
         echo "Waiting for ES to start..."
         sleep 5
     done
