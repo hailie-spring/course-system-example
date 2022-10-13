@@ -14,6 +14,7 @@ function putEsTemplate() {
         fi
         echo "Waiting for ES to start..."
         sleep 5
+        STATUSCODE=$(${baseCurl} -o /dev/null -s --head --write-out "%{http_code}" -X GET ${baseUrl})
     done
     for file_path in $(find ./estemplate/ -name '*.json' -type f); do
         echo "${file_path}" | grep "\-policy.json" >/dev/null 2>&1
