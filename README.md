@@ -1,8 +1,18 @@
-Here is a example how to develop a website by using javascript and how to deploy the whole site by docker compose. 
+# Course Management System
+This is a whole website example including frontend, backend, deployment.
 
-The following video is the brief introduction about the service.
+The frontend client is implemented with javascript, materail-ui, react-hooks.   
+And the backend service is implemented with nodejs, elasticsearch, redis.  
+The interaction with restful api, to avoid cross-domain, use nginx as proxy service.  
 
-[Introduction Vedio](https://github.com/hailie-spring/course-system-example/blob/main/introduction/introduction.mp4)
+All services run in docker and organized with docker compose. Welcome to watch and star ^_^  
+
+The project is about course system management. With it, companied could record contract and attendance with students.  
+It provides query, add, delete and update operations.
+![Animated demo](https://github.com/hailie-spring/course-system-example/blob/main/introduction/course-system-introduction.gif)
+
+
+# Development
 
 The steps to start the service is:
 1. git clone 
@@ -15,3 +25,7 @@ The steps to start the service is:
 If want to stop the service:   
 
 make down
+
+# deployment
+
+
