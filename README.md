@@ -28,4 +28,5 @@ make down
 
 # deployment
 
+![Animated demo](https://github.com/hailie-spring/course-system-example/blob/main/introduction/course-system-deployment-example%20.gif)
 
